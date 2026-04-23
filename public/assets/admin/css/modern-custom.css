@@ -1,0 +1,207 @@
+/* Modern Custom Styles for Office Management System */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --success: #4cc9f0;
+    --info: #4895ef;
+    --warning: #f72585;
+    --danger: #7209b7;
+    --header-gradient: linear-gradient(135deg, #FFD700 0%, #FFB900 100%);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --hover-shadow: 0 20px 40px rgba(67, 97, 238, 0.15);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #f4f7fe !important;
+    color: #2b2d42 !important;
+}
+
+/* Header Improvements */
+.site-header {
+    background: var(--header-gradient) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+    border-bottom: none !important;
+    height: 70px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important; /* Pushes content to corners */
+    padding: 0 30px !important;
+}
+
+.site-header .brand-main {
+    color: #2b2d42 !important;
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+    text-decoration: none !important;
+    transition: transform 0.3s ease;
+}
+
+.site-header .brand-main:hover {
+    transform: scale(1.05);
+}
+
+.site-header .action-list {
+    margin-left: auto !important;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.site-header .action-list li a {
+    color: rgba(43, 45, 66, 0.8) !important;
+    font-weight: 500;
+}
+
+.site-header .action-list li .avatar img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+    object-fit: cover;
+}
+
+/* Sidebar Improvements */
+.site-sidebar {
+    background: #fff !important;
+    border-right: none !important;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.03) !important;
+}
+
+.site-sidebar .nav-item a {
+    color: #6c757d !important;
+    font-weight: 500 !important;
+    padding: 12px 25px !important;
+    margin: 5px 15px !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.site-sidebar .nav-item.active a,
+.site-sidebar .nav-item a:hover {
+    background: rgba(67, 97, 238, 0.08) !important;
+    color: var(--primary) !important;
+}
+
+/* Dashboard Dashbox - Premium Version */
+.dashbox {
+    background: #fff !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    box-shadow: var(--card-shadow) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    border: 1px solid rgba(255,255,255,0.8) !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.dashbox:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: var(--hover-shadow) !important;
+    border-color: rgba(67, 97, 238, 0.2) !important;
+}
+
+.dashbox i {
+    font-size: 3rem !important;
+    margin-bottom: 20px;
+    background: rgba(67, 97, 238, 0.1);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.dashbox:hover i {
+    background: var(--primary);
+    color: #fff !important;
+}
+
+.dashbox .title {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    color: #1a1a1a !important;
+    margin-bottom: 5px;
+}
+
+.dashbox .desc {
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    color: #8d99ae !important;
+    letter-spacing: 0.5px;
+}
+
+/* Card Styling */
+.card {
+    border: none !important;
+    border-radius: 24px !important;
+    box-shadow: var(--card-shadow) !important;
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(10px);
+}
+
+.card-header {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    padding: 20px 30px !important;
+}
+
+.card-header h6 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2b2d42;
+}
+
+/* Login Page - Premium Glassmorphism */
+.login-page {
+    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+.login-page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+}
+
+.login-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 30px !important;
+    padding: 50px !important;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+}
+
+.login-box .logo-main {
+    font-size: 1.8rem !important;
+    color: var(--primary) !important;
+}
+
+.btn-login {
+    background: var(--header-gradient) !important;
+    border: none !important;
+    border-radius: 15px !important;
+    padding: 15px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.2) !important;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(67, 97, 238, 0.4) !important;
+}
