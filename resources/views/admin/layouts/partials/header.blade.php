@@ -10,6 +10,15 @@
   </a>
 
   <ul class="action-list">
-    <!-- Right side cleared as requested -->
+    <li>
+      <a href="{{ route('logout') }}" 
+         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+         style="color: #fff; font-weight: 500; text-decoration: none; padding-right: 20px;">
+        <i class="fa fa-power-off"></i> Logout
+      </a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+      </form>
+    </li>
   </ul>
 </header>
